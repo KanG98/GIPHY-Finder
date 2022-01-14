@@ -1,3 +1,22 @@
 body{
   background-color: black;
 }
+
+/* grid css */
+
+.row {
+    line-height: 1.5;
+    -webkit-column-count: 3;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    3;
+    -moz-column-gap:      0px;
+    column-count:         3;
+    column-gap:           0px;  
+  }
+  
+.gif{
+    width: 100%;
+    height: auto;
+}
+  
+
