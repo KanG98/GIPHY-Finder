@@ -13,7 +13,7 @@ function App() {
       </header>
 
       {  <Navbar/> /* Navbar goes here */}
-        <image/>
+
         {<SearchBar/>}
 
 

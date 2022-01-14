@@ -19,7 +19,7 @@ class Navbar extends React.Component {
 
         <view>
 
-        <button style ={styles.button1} onClick={() => window.location.reload(false)} > <img src = {"src/image/GIPHY_Images.png"} /> HOME PAGE</button>
+        <button style ={styles.button1} onClick={(stickers) => window.location.reload(false)} > <img src = {"src/image/GIPHY_Images.png"} /> HOME PAGE</button>
         <button style ={styles.button1} onClick={stickers}> MEMES </button>
          <button style ={styles.button1} onClick={stickers}> TRENDING </button>
         <button style ={styles.button1} onClick={stickers} > RANDOM </button>
