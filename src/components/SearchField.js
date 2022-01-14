@@ -4,7 +4,7 @@ import React, { Component } from "react"
 class SearchBar extends Component {
   constructor(props) {
     super(props)
-    this.state = { term: '' }
+    this.state = { value: '' }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -28,6 +28,7 @@ class SearchBar extends Component {
           value={this.state.term}
           onClick={this.handleChange}
         />
+        <button type="submit">Search</button>
       </div>
     )
   }
@@ -35,8 +36,11 @@ class SearchBar extends Component {
 export default SearchBar
 const styles = {
     inputButton:{
-      width: "100%",
-      height: "100%",
+    overflow: "hidden",
+    width: "90%",
+    height: "100%",
+    whiteSpace: "nowrap",
+
 
 
 
