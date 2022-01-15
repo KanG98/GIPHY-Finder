@@ -6,6 +6,7 @@ import queryImgWithTerm from "./scripts/queryImgWithTerm";
 import './App.css'
 import queryTrendingImg from "./scripts/queryTrendingImg";
 import queryRandomImg from "./scripts/queryRandomImg";
+import image from "./image/GIPHY_Images.png"
 
 
 
@@ -25,7 +26,7 @@ function App() {
         // queryImgWithTerm(keyword, imgArr, setImgArr, apiKey)
       }
     }
-    
+
     useEffect(()=>{
       // queryImgWithTerm(keyword, imgArr, setImgArr, apiKey)
       // queryTrendingImg(imgArr, setImgArr, apiKey)
@@ -41,6 +42,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
+
       {  <Navbar/> /* Navbar goes here */}
         <SearchBar/>
         <ImageTable imgArr={imgArr} />
@@ -49,5 +51,3 @@ function App() {
 }
 
 export default App;
-
-
