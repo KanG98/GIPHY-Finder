@@ -4,7 +4,7 @@ export default async function queryImgWithTerm(keyWord, imgArr, setImgArr, apiKe
         .then(res => {
             setImgArr(res["data"])
             console.log(res)
-        
+            
         })
 }
 
