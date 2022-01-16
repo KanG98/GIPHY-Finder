@@ -1,4 +1,4 @@
-// maybe not to embed the function
+// maybe not to embedded the function
 
 export default function sortImgSize(imgArr, setImgArr){
     setImgArr(imgArr.sort(compare))
