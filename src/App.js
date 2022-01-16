@@ -49,7 +49,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-        <Navbar setKeyword={setKeyword} imgArr={imgArr} setImgArr={setImgArr}/>
+        <Navbar setKeyword={setKeyword} imgArr={imgArr} setImgArr={setImgArr} apiKey={apiKey}/>
         <SearchBar setKeyword={setKeyword} rating={rating} setRating={setRating}/>
         <ImageTable imgArr={imgArr} />
     </div>

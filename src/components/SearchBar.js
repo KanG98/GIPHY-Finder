@@ -23,8 +23,6 @@ class SearchBar extends Component {
   handleFilter(event){
     let elemId = event.target.id
     const rating = this.props.rating
-    console.log(elemId)
-    console.log(rating)
     if(elemId === "p-rate"){
       let newRating = [...rating]
       newRating[0] = newRating[0]==="p" ? "" : "p"
