@@ -1,14 +1,11 @@
 import { useEffect, useState, componentDidMount } from "react";
 import Navbar from "./components/NavBar";
-import SearchBar from "./components/SearchField"
+import SearchBar from "./components/SearchBar"
 import ImageTable from "./components/ImageTable"
 import queryImgWithTerm from "./scripts/queryImgWithTerm";
 import './App.css'
 import queryTrendingImg from "./scripts/queryTrendingImg";
-import queryRandomImg from "./scripts/queryRandomImg";
-import image from "./image/GIPHY_Images.png"
 import filterImgRating from "./scripts/filterImgRating";
-
 
 
 const apiKey = "ebk9TgbXWDj65HhL7XZbexSaBR4XYyQJ"
@@ -18,6 +15,8 @@ const apiKey = "ebk9TgbXWDj65HhL7XZbexSaBR4XYyQJ"
 function App() {
     const [keyword, setKeyword] = useState("")
     const [imgArr, setImgArr] = useState([])
+    const [rating, setRating] = useState(["p", "g", "pg"])
+    const [tempGar, setTempGar] = useState([])
 
     function handleScroll(e){
       const bottom = e.target.scrollingElement.scrollHeight - e.target.scrollingElement.scrollTop === e.target.scrollingElement.clientHeight;
@@ -29,23 +28,29 @@ function App() {
     }
 
     useEffect(()=>{
-      // queryImgWithTerm(keyword, imgArr, setImgArr, apiKey)
-      queryTrendingImg(imgArr, setImgArr, apiKey)
-      // queryRandomImg(imgArr, setImgArr, apiKey)
-
+      queryImgWithTerm(keyword, imgArr, setImgArr, apiKey)
+      setRating(["p", "g", "pg"])
+      setTempGar([])
     }, [keyword])
 
-    useEffect(()=>{
+    useEffect(() =>{
+      filterImgRating(rating, imgArr, setImgArr, tempGar, setTempGar)
+    }, [rating])
+
+    useEffect(() =>{
+      queryTrendingImg(imgArr, setImgArr, apiKey)
       window.scrollTo(0, 0)
       window.addEventListener('scroll', handleScroll)
     }, [])
+
+
 
   return (
     <div className="App">
       <header className="App-header">
       </header>
-        <Navbar/>
-        <SearchBar/>
+        <Navbar setKeyword={setKeyword} imgArr={imgArr} setImgArr={setImgArr}/>
+        <SearchBar setKeyword={setKeyword} rating={rating} setRating={setRating}/>
         <ImageTable imgArr={imgArr} />
     </div>
   );
