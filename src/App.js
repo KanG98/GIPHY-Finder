@@ -8,7 +8,7 @@ import queryTrendingImg from "./scripts/queryTrendingImg";
 import filterImgRating from "./scripts/filterImgRating";
 
 
-const apiKey = "ebk9TgbXWDj65HhL7XZbexSaBR4XYyQJ"
+const apiKey = "7zXTZYA3auJeCtontYTUMLwB1uAN9On3"
 
 
 

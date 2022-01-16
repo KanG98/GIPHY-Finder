@@ -11,7 +11,8 @@ export default function ImageTable(props){
             {props.imgArr === [] ? <p style={{color: "white"}}>empty</p> : 
             <div className="row">
                     <div className="column">
-                        {props.imgArr.map((data) => <ImageCell key={data['id']} className="gif" data={data}/>)}
+                        {props.imgArr.map((data) => <ImageCell key={data['id'] + Math.floor(Math.random() * (999999999 - 0 + 1)) + 0} className="gif" data={data}/>)}
+                        {/* random to avoid id confliction, better solution is to filter out the repeated images when fetching from api */}
                     </div>
             </div>
             }
