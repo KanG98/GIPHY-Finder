@@ -24,7 +24,8 @@ class Navbar extends React.Component {
         <button style ={styles.button1} onClick={(stickers) => window.location.reload(false)} > HOME</button>
         <button style ={styles.button1} onClick={() => {this.props.setKeyword("memes")}}> MEMES </button>
         <button style ={styles.button1} onClick={() => window.location.reload(false)}> TRENDING </button>
-        <button style ={styles.button1} onClick={() => {queryRandomImg(this.props.imgArr, this.props.setImgArr, this.props.apiKey)}} > RANDOM </button>
+        <button style ={styles.button1} 
+            onClick={() => {queryRandomImg(this.props.imgArr, this.props.setImgArr, this.props.apiKey)}} > RANDOM </button>
 
         </view>
         </nav>
