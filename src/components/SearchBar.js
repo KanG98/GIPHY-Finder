@@ -42,7 +42,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
+      <div style = {{display: 'flex', justifyContent: 'center'}}>
 
         <input style ={styles.inputButton}
           type="text"
@@ -50,6 +50,7 @@ class SearchBar extends Component {
           onChange={this.handleChange}
         />
         <button type="submit" onClick={this.handleSubmit}>Search</button>
+
         <div style={styles.filterCheckbox}>
           <input type="checkbox" id="p-rate" onClick={this.handleFilter} checked={this.props.rating[0] === 'p'}/><label>P</label>
           <input type="checkbox" id="g-rate" onClick={this.handleFilter} checked={this.props.rating[1] === 'g'}/><label>G</label>
@@ -63,15 +64,19 @@ export default SearchBar
 const styles = {
     inputButton:{
       overflow: "hidden",
-      width: "90%",
+      width: "50%",
       height: "100%",
-      whiteSpace: "nowrap"
+      whiteSpace: "nowrap",
+      padding: 5,
+
+
     },
     filterCheckbox:{
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      color: "white"
+      color: "white",
+
     }
-    
+
 }

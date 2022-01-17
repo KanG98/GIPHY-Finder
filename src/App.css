@@ -11,12 +11,10 @@ body{
     -moz-column-count:    3;
     -moz-column-gap:      0px;
     column-count:         3;
-    column-gap:           0px;  
+    column-gap:           10px;
   }
-  
+
 .gif{
     width: 100%;
     height: auto;
 }
-  
-

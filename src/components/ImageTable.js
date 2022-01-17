@@ -8,7 +8,7 @@ import "./../App.css"
 export default function ImageTable(props){
     return(
         <div style={styles.container} >
-            {props.imgArr === [] ? <p style={{color: "white"}}>empty</p> : 
+            {props.imgArr === [] ? <p style={{color: "white"}}>empty</p> :
             <div className="row">
                     <div className="column">
                         {props.imgArr.map((data) => <ImageCell key={data['id'] + Math.floor(Math.random() * (999999999 - 0 + 1)) + 0} className="gif" data={data}/>)}
