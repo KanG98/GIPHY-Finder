@@ -2,9 +2,6 @@ import React from "react"
 import ImageCell from "./ImageCell"
 import "./../App.css"
 
-
-
-
 export default function ImageTable(props){
     return(
         <div style={styles.container} >

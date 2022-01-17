@@ -2,10 +2,6 @@ import React from "react"
 import queryRandomImg from "../scripts/queryRandomImg";
 import icon from "./../image/GIPHY_Images.png"
 
-function stickers(){
-
-}
-
 
 class Navbar extends React.Component {
   render(){
@@ -15,16 +11,13 @@ class Navbar extends React.Component {
        <div style = {{display: 'flex', justifyContent: 'center'}}>
       <nav className = "NavbarItems">
 
-
-
-
-
         <view>
 <img src = {icon} />
         <button style ={styles.button1} onClick={(stickers) => window.location.reload(false)} > HOME</button>
         <button style ={styles.button1} onClick={() => {this.props.setKeyword("memes")}}> MEMES </button>
         <button style ={styles.button1} onClick={() => window.location.reload(false)}> TRENDING </button>
-        <button style ={styles.button1} onClick={() => {queryRandomImg(this.props.imgArr, this.props.setImgArr, this.props.apiKey)}} > RANDOM </button>
+        <button style ={styles.button1} 
+            onClick={() => {queryRandomImg(this.props.imgArr, this.props.setImgArr, this.props.apiKey)}} > RANDOM </button>
 
         </view>
         </nav>

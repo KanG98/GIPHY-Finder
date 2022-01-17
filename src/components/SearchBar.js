@@ -52,9 +52,9 @@ class SearchBar extends Component {
         <button type="submit" onClick={this.handleSubmit}>Search</button>
 
         <div style={styles.filterCheckbox}>
-          <input type="checkbox" id="p-rate" onClick={this.handleFilter} checked={this.props.rating[0] === 'p'}/><label>P</label>
-          <input type="checkbox" id="g-rate" onClick={this.handleFilter} checked={this.props.rating[1] === 'g'}/><label>G</label>
-          <input type="checkbox" id="pg-rate" onClick={this.handleFilter} checked={this.props.rating[2] === 'pg'}/><label>PG</label>
+          <input type="checkbox" id="p-rate" onChange={this.handleFilter} checked={this.props.rating[0] === 'p'}/><label>P</label>
+          <input type="checkbox" id="g-rate" onChange={this.handleFilter}  checked={this.props.rating[1] === 'g'}/><label>G</label>
+          <input type="checkbox" id="pg-rate" onChange={this.handleFilter}  checked={this.props.rating[2] === 'pg'}/><label>PG</label>
         </div>
       </div>
     )
@@ -67,15 +67,14 @@ const styles = {
       width: "50%",
       height: "100%",
       whiteSpace: "nowrap",
-      padding: 5,
-
-
+      padding: "5px",
     },
     filterCheckbox:{
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       color: "white",
+      marginLeft: "20px"
 
     }
 
