@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GIPHY-Finder/static/css/main.4e19fc65.css",
+    "main.js": "/GIPHY-Finder/static/js/main.c7cecb05.js",
+    "index.html": "/GIPHY-Finder/index.html",
+    "main.4e19fc65.css.map": "/GIPHY-Finder/static/css/main.4e19fc65.css.map",
+    "main.c7cecb05.js.map": "/GIPHY-Finder/static/js/main.c7cecb05.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e19fc65.css",
+    "static/js/main.c7cecb05.js"
+  ]
+}
