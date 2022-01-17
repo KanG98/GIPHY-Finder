@@ -2,10 +2,6 @@ import React from "react"
 import queryRandomImg from "../scripts/queryRandomImg";
 import icon from "./../image/GIPHY_Images.png"
 
-function stickers(){
-
-}
-
 
 class Navbar extends React.Component {
   render(){
@@ -14,10 +10,6 @@ class Navbar extends React.Component {
 
        <div style = {{display: 'flex', justifyContent: 'center'}}>
       <nav className = "NavbarItems">
-
-
-
-
 
         <view>
 <img src = {icon} />

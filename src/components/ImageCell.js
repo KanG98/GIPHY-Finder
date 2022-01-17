@@ -17,7 +17,8 @@ const styles = {
     aloneCell:{
         display: "flex",
         paddingTop: "50px",
+        paddingBottom: "400px",
         margin: "0 auto",
-        width: "500px"
+        width: "500px",
     }
 }

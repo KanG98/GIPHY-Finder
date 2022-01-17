@@ -7,10 +7,10 @@ import './App.css'
 import queryTrendingImg from "./scripts/queryTrendingImg";
 import filterImgRating from "./scripts/filterImgRating";
 import ImageCell from "./components/ImageCell";
+import MoreRandomBtn from "./components/MoreRandomBtn";
 
 
 const apiKey = "7zXTZYA3auJeCtontYTUMLwB1uAN9On3"
-
 
 
 function App() {
@@ -53,7 +53,11 @@ function App() {
         <Navbar setKeyword={setKeyword} imgArr={imgArr} setImgArr={setImgArr} apiKey={apiKey}/>
         <SearchBar setKeyword={setKeyword} rating={rating} setRating={setRating}/>
         {imgArr.length == 1 ? 
-          <ImageCell key={imgArr[0]['id']} className="gif" data={imgArr[0]} alone={true} style={{backgroundColor: "red"}}/> :  
+        <div>
+          <MoreRandomBtn imgArr={imgArr} setImgArr={setImgArr} apiKey={apiKey}/>
+          <ImageCell key={imgArr[0]['id']} className="gif" data={imgArr[0]} alone={true} style={{backgroundColor: "red"}}/> 
+        </div>
+          :  
           <ImageTable imgArr={imgArr} />}
     </div>
   );
